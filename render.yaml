@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: slm-ai
+    plan: free
+    env: static
+    buildCommand: bash server/build.sh
+    startCommand: ./llama-server --model ./model/slm.gguf --port 8080 --ctx-size 1024
